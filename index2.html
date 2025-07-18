@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsightPod</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f8f8; /* Light gray background */
+      }
+      /* Custom colors for the design */
+      .bg-custom-orange {
+        background-color: #ff7b42;
+      }
+      .bg-custom-blue {
+        background-color: #4a90e2;
+      }
+      .bg-custom-pink {
+        background-color: #ff69b4;
+      }
+      .bg-custom-green {
+        background-color: #50e3c2;
+      }
+      .bg-custom-purple {
+        background-color: #9b59b6;
+      }
+      .text-custom-orange {
+        color: #ff7b42;
+      }
+      .text-custom-blue {
+        color: #4a90e2;
+      }
+      .text-custom-pink {
+        color: #ff69b4;
+      }
+      .text-custom-green {
+        color: #50e3c2;
+      }
+      .text-custom-purple {
+        color: #9b59b6;
+      }
+
+      /* Custom shapes for the hero section background */
+      .shape-circle {
+        border-radius: 50%;
+      }
+      .shape-rounded-rect {
+        border-radius: 25%;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <!-- Header Section -->
+    <header
+      class="container mx-auto px-4 py-6 flex justify-between items-center bg-white rounded-xl shadow-sm mt-6"
+    >
+      <div class="flex items-center space-x-2">
+        <!-- InsightPod Logo -->
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4ZM12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6ZM12 8C13.1046 8 14 8.89543 14 10C14 11.1046 13.1046 12 12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8Z"
+            fill="#4A90E2"
+          />
+        </svg>
+        <span class="font-bold text-xl text-gray-800">InsightPod</span>
+      </div>
+      <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
+        <a href="#" class="hover:text-custom-blue transition duration-300"
+          >About</a
+        >
+        <a href="#" class="hover:text-custom-blue transition duration-300"
+          >Subscribe</a
+        >
+        <a href="#" class="hover:text-custom-blue transition duration-300"
+          >Episode</a
+        >
+        <a href="#" class="hover:text-custom-blue transition duration-300"
+          >Insights</a
+        >
+      </nav>
+      <button
+        class="bg-custom-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition duration-300 shadow-md"
+      >
+        Subscribe now
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between mt-10 bg-white rounded-3xl shadow-lg relative overflow-hidden"
+    >
+      <!-- Left Content -->
+      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 z-10">
+        <h1
+          class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6"
+        >
+          Navigating Ideas, <br />
+          Sharing Insights.
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+          Unlock invaluable wisdom personalized for you in our top-notch
+          podcast. Dive into episodes designed to deliver relevant insights that
+          cater to your interests and needs.
+        </p>
+        <button
+          class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition duration-300 shadow-lg flex items-center justify-center md:inline-flex mx-auto md:mx-0"
+        >
+          Listen now
+          <svg
+            class="ml-2"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Right Image Collage with shapes -->
+      <div
+        class="md:w-1/2 relative flex justify-center items-center h-96 md:h-auto"
+      >
+        <!-- Abstract Shapes -->
+        <div
+          class="absolute w-24 h-24 bg-custom-orange shape-rounded-rect -top-8 left-1/4 transform -translate-x-1/2 rotate-45 opacity-70"
+        ></div>
+        <div
+          class="absolute w-32 h-32 bg-custom-pink shape-circle top-1/4 left-3/4 transform -translate-x-1/2 opacity-70"
+        ></div>
+        <div
+          class="absolute w-20 h-20 bg-custom-green shape-circle bottom-1/4 left-1/4 transform -translate-x-1/2 opacity-70"
+        ></div>
+        <div
+          class="absolute w-28 h-28 bg-custom-blue shape-rounded-rect -bottom-8 right-1/4 transform translate-x-1/2 -rotate-30 opacity-70"
+        ></div>
+
+        <!-- Images (placeholders for now) -->
+        <div
+          class="relative w-full max-w-md h-full flex items-center justify-center"
+        >
+          <img
+            src="https://placehold.co/200x200/FFD700/000?text=Hello!"
+            alt="Person 1"
+            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4 w-40 h-40 object-cover rounded-full shadow-xl border-4 border-white z-20"
+          />
+          <img
+            src="https://placehold.co/250x250/FF69B4/FFF?text=InsightPod"
+            alt="Person 2"
+            class="absolute bottom-0 left-1/4 transform -translate-x-1/2 translate-y-1/4 w-48 h-48 object-cover rounded-full shadow-xl border-4 border-white z-20"
+          />
+          <img
+            src="https://placehold.co/220x220/4A90E2/FFF?text=0"
+            alt="Person 3"
+            class="absolute top-1/4 right-0 transform translate-x-1/4 -translate-y-1/4 w-44 h-44 object-cover rounded-full shadow-xl border-4 border-white z-20"
+          />
+
+          <!-- InsightPod card -->
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-xl shadow-2xl z-30 flex items-center space-x-2"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4ZM12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6ZM12 8C13.1046 8 14 8.89543 14 10C14 11.1046 13.1046 12 12 12C10.8954 12 10 11.1046 10 10C10 8.89543 10.8954 8 12 8Z"
+                fill="#4A90E2"
+              />
+            </svg>
+            <span class="font-semibold text-gray-800">InsightPod</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Podcast Description Section -->
+    <section
+      class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between mt-10 bg-white rounded-3xl shadow-lg"
+    >
+      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+          Our podcast dives into diverse topics like life, finances, and
+          personal experiences, offering valuable insights and practical advice.
+        </h2>
+      </div>
+      <div class="md:w-1/2 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+        <div class="p-6 rounded-xl bg-gray-50 shadow-sm">
+          <p class="text-custom-orange text-5xl font-extrabold">5+</p>
+          <p class="text-gray-600 text-lg">Awards Gained</p>
+        </div>
+        <div class="p-6 rounded-xl bg-gray-50 shadow-sm">
+          <p class="text-custom-blue text-5xl font-extrabold">12+</p>
+          <p class="text-gray-600 text-lg">Years of experience</p>
+        </div>
+        <div class="p-6 rounded-xl bg-gray-50 shadow-sm">
+          <p class="text-custom-green text-5xl font-extrabold">236</p>
+          <p class="text-gray-600 text-lg">Podcasts</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What makes us different section -->
+    <section
+      class="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center justify-between mt-10 bg-white rounded-3xl shadow-lg"
+    >
+      <div
+        class="md:w-1/2 relative flex justify-center items-center mb-10 md:mb-0"
+      >
+        <img
+          src="https://placehold.co/350x350/FF69B4/FFF?text=Person"
+          alt="Person with headphones"
+          class="rounded-3xl shadow-xl border-4 border-white"
+        />
+        <div
+          class="absolute top-1/4 left-0 bg-custom-orange p-2 rounded-lg text-white text-sm font-semibold"
+        >
+          Insightful
+        </div>
+        <div
+          class="absolute bottom-1/4 right-0 bg-custom-blue p-2 rounded-lg text-white text-sm font-semibold"
+        >
+          Creative
+        </div>
+      </div>
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+          What makes us different from other
+        </h2>
+        <ul class="space-y-4 text-lg text-gray-700">
+          <li class="flex items-start">
+            <svg
+              class="w-6 h-6 text-custom-orange mr-3 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span
+              >Relevant Content: Our content is tailored to your preferences,
+              ensuring every episode resonates with your interests.</span
+            >
+          </li>
+          <li class="flex items-start">
+            <svg
+              class="w-6 h-6 text-custom-blue mr-3 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span
+              >Insightful Discussions: We delve deep into topics, providing
+              unique perspectives and actionable insights.</span
+            >
+          </li>
+          <li class="flex items-start">
+            <svg
+              class="w-6 h-6 text-custom-green mr-3 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span
+              >Combination of entertainment and information: Learn and be
+              entertained simultaneously.</span
+            >
+          </li>
+          <li class="flex items-start">
+            <svg
+              class="w-6 h-6 text-custom-purple mr-3 flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span
+              >Reliable Source of Knowledge: Our experts provide well-researched
+              and credible information.</span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Listen to the latest section -->
+    <section
+      class="container mx-auto px-4 py-16 flex flex-col items-center justify-center mt-10 bg-white rounded-3xl shadow-lg relative overflow-hidden"
+    >
+      <!-- Abstract shapes -->
+      <div
+        class="absolute w-32 h-32 bg-custom-orange shape-circle -top-8 left-1/4 transform -translate-x-1/2 opacity-70"
+      ></div>
+      <div
+        class="absolute w-24 h-24 bg-custom-blue shape-rounded-rect top-1/4 right-1/4 transform translate-x-1/2 rotate-12 opacity-70"
+      ></div>
+      <div
+        class="absolute w-20 h-20 bg-custom-green shape-circle bottom-1/4 left-1/2 transform -translate-x-1/2 opacity-70"
+      ></div>
+
+      <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center z-10">
+        Listen to the latest and exciting podcast content
+      </h2>
+      <button
+        class="bg-custom-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300 shadow-lg flex items-center z-10"
+      >
+        Listen now
+        <svg
+          class="ml-2"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </button>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container mx-auto px-4 py-16 mt-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Team Member 1 -->
+        <div
+          class="bg-custom-orange rounded-3xl p-6 flex flex-col items-center text-white text-center shadow-lg relative overflow-hidden"
+        >
+          <div
+            class="absolute w-20 h-20 bg-white opacity-20 rounded-full -top-4 -left-4"
+          ></div>
+          <div
+            class="absolute w-12 h-12 bg-white opacity-20 rounded-full -bottom-4 -right-4"
+          ></div>
+          <img
+            src="https://placehold.co/150x150/FF7B42/FFF?text=Mr.+Mark+baba"
+            alt="Mr. Mark baba"
+            class="w-36 h-36 object-cover rounded-full border-4 border-white shadow-md mb-4"
+          />
+          <h3 class="text-2xl font-bold">Mr. Mark baba</h3>
+          <p class="text-lg opacity-90">1.6 million streams</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div
+          class="bg-custom-pink rounded-3xl p-6 flex flex-col items-center text-white text-center shadow-lg relative overflow-hidden"
+        >
+          <div
+            class="absolute w-20 h-20 bg-white opacity-20 rounded-full -top-4 -left-4"
+          ></div>
+          <div
+            class="absolute w-12 h-12 bg-white opacity-20 rounded-full -bottom-4 -right-4"
+          ></div>
+          <img
+            src="https://placehold.co/150x150/FF69B4/FFF?text=Nadia+Lestary"
+            alt="Nadia Lestary"
+            class="w-36 h-36 object-cover rounded-full border-4 border-white shadow-md mb-4"
+          />
+          <h3 class="text-2xl font-bold">Nadia Lestary</h3>
+          <p class="text-lg opacity-90"></p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div
+          class="bg-custom-green rounded-3xl p-6 flex flex-col items-center text-white text-center shadow-lg relative overflow-hidden"
+        >
+          <div
+            class="absolute w-20 h-20 bg-white opacity-20 rounded-full -top-4 -left-4"
+          ></div>
+          <div
+            class="absolute w-12 h-12 bg-white opacity-20 rounded-full -bottom-4 -right-4"
+          ></div>
+          <img
+            src="https://placehold.co/150x150/50E3C2/FFF?text=Evan+Caster+Lee"
+            alt="Evan Caster Lee"
+            class="w-36 h-36 object-cover rounded-full border-4 border-white shadow-md mb-4"
+          />
+          <h3 class="text-2xl font-bold">Evan Caster Lee</h3>
+          <p class="text-lg opacity-90"></p>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div
+          class="bg-custom-blue rounded-3xl p-6 flex flex-col items-center text-white text-center shadow-lg relative overflow-hidden"
+        >
+          <div
+            class="absolute w-20 h-20 bg-white opacity-20 rounded-full -top-4 -left-4"
+          ></div>
+          <div
+            class="absolute w-12 h-12 bg-white opacity-20 rounded-full -bottom-4 -right-4"
+          ></div>
+          <img
+            src="https://placehold.co/150x150/4A90E2/FFF?text=Stefy+Catlyna"
+            alt="Stefy Catlyna"
+            class="w-36 h-36 object-cover rounded-full border-4 border-white shadow-md mb-4"
+          />
+          <h3 class="text-2xl font-bold">Stefy Catlyna</h3>
+          <p class="text-lg opacity-90"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer
+      class="container mx-auto px-4 py-10 mt-10 bg-white rounded-3xl shadow-lg flex flex-col md:flex-row items-center justify-between"
+    >
+      <div class="text-center md:text-left mb-6 md:mb-0">
+        <h3 class="text-2xl font-bold text-gray-900 mb-2">
+          Unlock invaluable wisdom personalized for you in our top-notch
+          podcast.
+        </h3>
+        <div
+          class="flex items-center justify-center md:justify-start space-x-2 text-gray-600 font-medium"
+        >
+          <a href="#" class="hover:text-custom-blue transition duration-300"
+            >About</a
+          >
+          <span class="text-gray-400">•</span>
+          <a href="#" class="hover:text-custom-blue transition duration-300"
+            >Subscribe</a
+          >
+          <span class="text-gray-400">•</span>
+          <a href="#" class="hover:text-custom-blue transition duration-300"
+            >Episode</a
+          >
+          <span class="text-gray-400">•</span>
+          <a href="#" class="hover:text-custom-blue transition duration-300"
+            >Insights</a
+          >
+        </div>
+      </div>
+      <div class="flex space-x-6">
+        <!-- Social Media Icons (using SVG for simplicity) -->
+        <a
+          href="#"
+          class="text-gray-600 hover:text-custom-blue transition duration-300"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.533A8.349 8.349 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012 10.77c-.095 0-.188 0-.283.012a4.104 4.104 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 2.063c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.533A8.349 8.349 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012 10.77c-.095 0-.188 0-.283.012a4.104 4.104 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.188a11.644 11.644 0 006.29 2.063z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="text-gray-600 hover:text-custom-blue transition duration-300"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 0C8.74 0 8.33 0 7.13 0h-1.02c-2.38 0-3.4 1.02-3.4 3.4v1.02c0 1.2.001 1.61.001 4.87s-.001 3.67-.001 4.87v1.02c0 2.38 1.02 3.4 3.4 3.4h1.02c1.2 0 1.61.001 4.87.001s3.67-.001 4.87-.001h1.02c2.38 0 3.4-1.02 3.4-3.4v-1.02c0-1.2.001-1.61.001-4.87s-.001-3.67-.001-4.87v-1.02c0-2.38-1.02-3.4-3.4-3.4h-1.02c-1.2 0-1.61.001-4.87.001zm0 2.16c3.23 0 3.58.001 4.85.001h1.02c1.83 0 2.45.62 2.45 2.45v1.02c0 1.27.001 1.62.001 4.85s-.001 3.58-.001 4.85v1.02c0 1.83-.62 2.45-2.45 2.45h-1.02c-1.27 0-1.62.001-4.85.001s-3.58-.001-4.85-.001h-1.02c-1.83 0-2.45-.62-2.45-2.45v-1.02c0-1.27-.001-1.62-.001-4.85s.001-3.58.001-4.85v-1.02c0-1.83.62-2.45 2.45-2.45h1.02c1.27 0 1.62-.001 4.85-.001zm0 3.62A6.22 6.22 0 1012 18.16a6.22 6.22 0 000-12.44zm0 2.16A4.06 4.06 0 1112 16.06a4.06 4.06 0 010-8.12zm6.2-7.23a1.45 1.45 0 100 2.9 1.45 1.45 0 000-2.9z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="text-gray-600 hover:text-custom-blue transition duration-300"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.262c-1.225 0-1.62.75-1.62 1.48V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

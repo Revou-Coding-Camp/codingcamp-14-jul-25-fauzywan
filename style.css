@@ -1,0 +1,94 @@
+:root {
+  --white-2: #f6f6f6;
+  --white: #fefefe;
+  --purple: #dfc8fd;
+  --red: #ed7673;
+  --blue: #739fd8;
+  --primary: #2887bf;
+  --secondary: #bf4628;
+  --brown: #fff4da;
+  --very-blue: #155dee;
+  --black: #343f5a;
+}
+.italic-left {
+  -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+  -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+  -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+  -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+  transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--white);
+}
+header a.active {
+  transition: all 0.3s ease-in-out;
+  border: 2px solid gray;
+}
+header a {
+  padding: 4px 12px;
+}
+.border-nav:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+.border-nav {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid gray;
+  border-radius: 15px;
+}
+
+#contactIcon {
+  padding: 5px;
+  border-radius: 100%;
+}
+
+header {
+  padding: 0 10px;
+}
+.team-card:hover,
+.team-card.active {
+  width: 320px;
+}
+.team-card {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 240px;
+  height: 250px;
+  position: relative;
+  border-radius: 12px;
+  padding: 10px 0 0 20px;
+  background: var(--secondary);
+  display: flex;
+  justify-content: end;
+}
+.team-card img {
+  width: 250px;
+  object-fit: cover;
+  justify-self: end;
+}
+@media screen and (max-width: 567px) {
+  #homePage img {
+    display: none;
+  }
+  nav {
+    gap: 10px;
+  }
+  .border-nav:hover {
+    background-color: unset;
+    color: var(--primary);
+    border: unset;
+    transition: all 0.3s ease-in-out;
+  }
+  .border-nav {
+    transition: all 0.3s ease-in-out;
+    border: unset;
+    border-radius: unset;
+  }
+}

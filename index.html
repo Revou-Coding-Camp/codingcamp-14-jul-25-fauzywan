@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kawaidays - Career & Skills Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=stylesheet"
+    />
+  </head>
+  <body>
+    <header
+      class="flex items-center justify-between bg-[var(--white)] min-h-20 px-4 relative z-50"
+    >
+      <a href="#" class="flex items-center">
+        <img
+          src="assets/img/logo2.png"
+          alt="Logo"
+          class="h-15 w-15 object-cover rounded-full"
+        />
+        <h1 class="text-sm md:block hidden font-bold text-[var(--primary)]">
+          Hello, <span id="username"> Kawaidays</span>
+        </h1>
+      </a>
+      <button id="mobileMenuButton" class="md:hidden focus:outline-none">
+        <svg
+          class="w-8 h-8 text-[var(--primary)]"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <nav
+        id="mainNav"
+        class="hidden md:flex md:gap-4 flex-col md:flex-row absolute md:static top-20 left-0 w-full md:w-auto bg-[var(--white)] md:bg-transparent shadow-md md:shadow-none py-4 md:py-0 transition-all duration-300 ease-in-out"
+      >
+        <a class="border-nav text-sm px-4 py-2 md:px-0 md:py-0" href="#homePage"
+          >Home</a
+        >
+        <a
+          class="border-nav text-sm px-4 py-2 md:px-0 md:py-0"
+          href="#ourProfile"
+          >Our Profile</a
+        >
+        <a class="border-nav text-sm px-4 py-2 md:px-0 md:py-0" href="#blog"
+          >Blogs</a
+        >
+        <a
+          class="border-nav text-sm px-4 py-2 md:px-0 md:py-0"
+          href="#messageUs"
+          >Message Us</a
+        >
+      </nav>
+      <div class="right-area flex items-center gap-2">
+        <a class="text-sm" href="#homePage">Sign In</a>
+        <a
+          id="contactUs"
+          href="#ourProfile"
+          class="text-xs group rounded-full border-1 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-[var(--white)] flex items-center gap-2 px-2 py-1 transition-colors duration-300"
+          >Contact Us
+          <svg
+            id="contactIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 text-[var(--white)] bg-[var(--primary)] group-hover:bg-[var(--white)] group-hover:text-[var(--primary)]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="min-h-[100dvh] pb-30 bg-[var(--white)] flex flex-col items-center justify-center text-center gap-10 px-4 md:px-0"
+        id="homePage"
+      >
+        <div class="flex relative flex-col items-center w-full max-w-4xl">
+          <div class="flex relative w-full justify-center">
+            <img
+              src="assets/img/hero1.jpg"
+              alt="Hero Image"
+              class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-cover z-2 hover:grayscale absolute -left-5 sm:-left-10 md:-left-20 lg:-left-40 top-0"
+            />
+            <img
+              src="assets/img/arrow-1.svg"
+              alt="Arrow Image"
+              class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-cover absolute -right-5 sm:-right-10 md:-right-20 lg:-right-40 rotate-[30deg] mt-27 ml-25"
+            />
+          </div>
+
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl text-center mt-4 font-extrabold tracking-extra-wide"
+            style="line-height: 1.1"
+          >
+            The Best Place to <br />
+            <span class="italic text-[var(--primary)]">Learn</span>
+            and
+            <span class="italic text-[var(--secondary)] italic-left">Grow</span
+            ><br />
+            your skills.
+          </h1>
+        </div>
+
+        <div
+          class="description-hero flex flex-col items-center relative w-full"
+        >
+          <p
+            class="text-center text-sm text-gray-600 max-w-xl mx-auto w-full px-4"
+          >
+            Discover what you love, learn at your own pace, and grow the skills
+            that matter — all in one place.
+          </p>
+          <a
+            href="#"
+            class="hover:bg-[var(--white)] transition-all ease-in-out duration-300 border hover:text-[var(--primary)] bg-[var(--primary)] flex justify-between items-center gap-1 text-[var(--white)] mt-10 px-3 py-2 rounded-full"
+          >
+            <span class="text-sm font-semibold"> Get Started </span>
+            <svg
+              id="contactIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 border group-hover:text-[var(--white)] group-hover:bg-[var(--primary)] bg-[var(--white)] text-[var(--primary)]"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+              />
+            </svg>
+          </a>
+          <img
+            src="assets/img/hero2.jpg"
+            alt="Hero Image"
+            class="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-cover absolute -right-5 sm:-right-10 md:-right-20 lg:-right-60 top-0 hidden sm:block"
+          />
+        </div>
+      </section>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full mx-auto px-4"
+      >
+        <div
+          class="rounded-xl p-6 bg-[var(--white)] group hover:bg-[var(--secondary)] shadow-md hover:shadow-xl transition"
+        >
+          <div
+            class="bg-[var(--secondary)] text-white font-bold w-12 h-12 flex items-center justify-center rounded-full mb-4"
+          >
+            1
+          </div>
+          <h3
+            class="font-semibold text-lg mb-1 group-hover:text-[var(--white)]"
+          >
+            Structured Learning
+          </h3>
+          <p
+            class="text-sm text-[var(--secondary)] group-hover:text-[var(--white)]"
+          >
+            We organize the material step by step so you can understand from the
+            basics to mastery.
+          </p>
+        </div>
+
+        <div
+          class="rounded-xl p-6 bg-[var(--white)] group hover:bg-[var(--secondary)] shadow-md hover:shadow-xl transition"
+        >
+          <div
+            class="bg-[var(--secondary)] text-white font-bold w-12 h-12 flex items-center justify-center rounded-full mb-4"
+          >
+            2
+          </div>
+          <h3
+            class="font-semibold text-lg mb-1 group-hover:text-[var(--white)]"
+          >
+            Fun Learning Method
+          </h3>
+          <p
+            class="text-sm text-[var(--secondary)] group-hover:text-[var(--white)]"
+          >
+            Learning doesn't have to be boring! There are interactive exercises,
+            quizzes, and exciting challenges.
+          </p>
+        </div>
+
+        <div
+          class="rounded-xl p-6 bg-[var(--white)] group hover:bg-[var(--secondary)] shadow-md hover:shadow-xl transition"
+        >
+          <div
+            class="bg-[var(--secondary)] text-white font-bold w-12 h-12 flex items-center justify-center rounded-full mb-4"
+          >
+            3
+          </div>
+          <h3
+            class="font-semibold text-lg mb-1 group-hover:text-[var(--white)]"
+          >
+            Self-Paced Learning
+          </h3>
+          <p
+            class="text-sm text-[var(--secondary)] group-hover:text-[var(--white)]"
+          >
+            You're free to learn anytime at your own pace, without pressure.
+          </p>
+        </div>
+
+        <div
+          class="rounded-xl p-6 bg-[var(--white)] group hover:bg-[var(--secondary)] shadow-md hover:shadow-xl transition"
+        >
+          <div
+            class="bg-[var(--secondary)] text-white font-bold w-12 h-12 flex items-center justify-center rounded-full mb-4"
+          >
+            4
+          </div>
+          <h3
+            class="font-semibold text-lg mb-1 group-hover:text-[var(--white)]"
+          >
+            Interactive Exercises
+          </h3>
+          <p
+            class="text-sm text-[var(--secondary)] group-hover:text-[var(--white)]"
+          >
+            Strengthen your understanding through fun quizzes and practice
+            activities.
+          </p>
+        </div>
+      </div>
+
+      <section id="ourProfile" class="py-10 flex flex-col items-center px-4">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-center mt-8">
+          Our Profile
+        </h2>
+
+        <p class="text-center mt-4 px-4 text-sm sm:text-base max-w-2xl">
+          We are a team of dedicated individuals <br />
+          working together to create amazing web experiences.
+        </p>
+        <div
+          id="profileDesc"
+          class="min-h-[60dvh] flex flex-col md:flex-row gap-10 justify-center items-center text-center mt-10 max-w-6xl w-full"
+        >
+          <p class="max-w-2xl text-left w-full px-4 md:px-0">
+            At Kawaidays, we believe that everyone deserves the chance to
+            discover their passion and pursue it boldly. Our platform is
+            designed to guide you through a meaningful learning journey —
+            combining structured paths, interactive content, and real-world
+            skills — so you can grow at your own pace and thrive in today’s
+            dynamic world.
+          </p>
+          <img
+            src="assets/img/profile.jpg"
+            class="w-full md:w-[80%] h-[240px] object-cover rounded-lg shadow-lg"
+            alt=""
+          />
+        </div>
+        <div class="meet-our-team mx-auto max-w-6xl w-full px-4 mt-10">
+          <h1
+            class="text-2xl sm:text-3xl font-semibold text-center sm:text-left"
+          >
+            Meet Our <span class="text-[var(--primary)] italic">Team</span>
+          </h1>
+          <p class="text-center sm:text-left">
+            People Behind Kawaidays, who are passionate about
+          </p>
+          <div class="team-list flex flex-wrap justify-center gap-4 mt-8">
+            <div
+              class="relative flex items-end team-card active group w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1rem)] lg:w-[calc(25%-1rem)] h-64 overflow-hidden rounded-lg shadow-lg cursor-pointer"
+            >
+              <img
+                src="assets/img/profile3.png"
+                alt="Mr. Abraham Smaug"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-300 group-hover:from-black/90"
+              ></div>
+              <div class="relative p-4 z-10 w-full">
+                <h1
+                  class="text-white font-semibold text-xl sm:text-2xl leading-tight"
+                >
+                  Mr. Abraham <br />Smaug
+                </h1>
+                <p
+                  class="bg-white px-3 mt-2 py-2 rounded-full text-xs title-card opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition-opacity duration-300"
+                >
+                  Chief Executive Officer
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex items-end team-card group w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1rem)] lg:w-[calc(25%-1rem)] h-64 overflow-hidden rounded-lg shadow-lg cursor-pointer"
+            >
+              <img
+                src="assets/img/profile1.png"
+                alt="Mrs. Angelina Christine"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-300 group-hover:from-black/90"
+              ></div>
+              <div class="relative p-4 z-10 w-full">
+                <h1 class="text-white font-semibold text-xl leading-tight">
+                  Mrs.Angelina <br />Christine
+                </h1>
+                <p
+                  class="bg-white px-3 mt-2 py-2 rounded-full text-xs title-card opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition-opacity duration-300"
+                >
+                  Chief Operating Officer
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex items-end team-card group w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1rem)] lg:w-[calc(25%-1rem)] h-64 overflow-hidden rounded-lg shadow-lg cursor-pointer"
+            >
+              <img
+                src="assets/img/profile2.png"
+                alt="Mrs. Ana Marina"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-300 group-hover:from-black/90"
+              ></div>
+              <div class="relative p-4 z-10 w-full">
+                <h1 class="text-white font-semibold text-xl leading-tight">
+                  Mrs. Ana <br />Marina
+                </h1>
+                <p
+                  class="bg-white px-3 mt-2 py-2 rounded-full text-xs title-card opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition-opacity duration-300"
+                >
+                  Head of Career Development
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex items-end team-card group w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.33%-1rem)] lg:w-[calc(25%-1rem)] h-64 overflow-hidden rounded-lg shadow-lg cursor-pointer"
+            >
+              <img
+                src="assets/img/profile4.png"
+                alt="Mr. Bob Euler"
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-300 group-hover:from-black/90"
+              ></div>
+              <div class="relative p-4 z-10 w-full">
+                <h1 class="text-white font-semibold text-xl leading-tight">
+                  Mr. Bob <br />Euler
+                </h1>
+                <p
+                  class="bg-white px-3 mt-2 py-2 rounded-full text-xs title-card opacity-0 group-hover:opacity-100 group-[.active]:opacity-100 transition-opacity duration-300"
+                >
+                  Chief Technology Officer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="blog"
+        class="px-4 sm:px-10 flex flex-col justify-center min-h-[100dvh] py-10"
+      >
+        <h1 class="text-2xl sm:text-3xl font-semibold text-center sm:text-left">
+          Read Our <span class="text-[var(--primary)] italic">Blog</span>
+        </h1>
+        <div
+          class="blog-menu flex flex-wrap gap-5 my-8 justify-center lg:justify-between max-w-7xl mx-auto w-full"
+        >
+          <article
+            class="blog-item bg-[var(--white-2)] w-full sm:w-[calc(50%-10px)] md:w-[calc(33.33%-10px)] lg:w-[calc(25%-15px)] h-[290px] rounded-[10px] shadow-md"
+          >
+            <img
+              src="https://picsum.photos/200"
+              alt="Blog Image"
+              class="blog-image object-cover w-full rounded-tl-[10px] rounded-tr-[10px] h-[57%]"
+            />
+            <div
+              class="desc px-4 mt-2 flex flex-col justify-between h-[calc(43%-1rem)]"
+            >
+              <div>
+                <h2 class="blog-title font-semibold text-base">Blog Title 1</h2>
+                <p class="blog-description text-xs my-2 text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod....
+                </p>
+              </div>
+              <a
+                href="#"
+                class="flex items-center gap-2 blog-link text-[var(--primary)] text-sm mt-2"
+                ><span> Read More </span>
+                <svg
+                  id="contactIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 text-[var(--white)] bg-[var(--primary)] group-hover:bg-[var(--white)] group-hover:text-[var(--primary)] rounded-full"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+          <article
+            class="blog-item bg-[var(--white-2)] w-full sm:w-[calc(50%-10px)] md:w-[calc(33.33%-10px)] lg:w-[calc(25%-15px)] h-[290px] rounded-[10px] shadow-md"
+          >
+            <img
+              src="https://picsum.photos/200"
+              alt="Blog Image"
+              class="blog-image object-cover w-full rounded-tl-[10px] rounded-tr-[10px] h-[57%]"
+            />
+            <div
+              class="desc px-4 mt-2 flex flex-col justify-between h-[calc(43%-1rem)]"
+            >
+              <div>
+                <h2 class="blog-title font-semibold text-base">Blog Title 2</h2>
+                <p class="blog-description text-xs my-2 text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod....
+                </p>
+              </div>
+              <a
+                href="#"
+                class="flex items-center gap-2 blog-link text-[var(--primary)] text-sm mt-2"
+                ><span> Read More </span>
+                <svg
+                  id="contactIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 text-[var(--white)] bg-[var(--primary)] group-hover:bg-[var(--white)] group-hover:text-[var(--primary)] rounded-full"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+          <article
+            class="blog-item bg-[var(--white-2)] w-full sm:w-[calc(50%-10px)] md:w-[calc(33.33%-10px)] lg:w-[calc(25%-15px)] h-[290px] rounded-[10px] shadow-md"
+          >
+            <img
+              src="https://picsum.photos/200"
+              alt="Blog Image"
+              class="blog-image object-cover w-full rounded-tl-[10px] rounded-tr-[10px] h-[57%]"
+            />
+            <div
+              class="desc px-4 mt-2 flex flex-col justify-between h-[calc(43%-1rem)]"
+            >
+              <div>
+                <h2 class="blog-title font-semibold text-base">Blog Title 3</h2>
+                <p class="blog-description text-xs my-2 text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod....
+                </p>
+              </div>
+              <a
+                href="#"
+                class="flex items-center gap-2 blog-link text-[var(--primary)] text-sm mt-2"
+                ><span> Read More </span>
+                <svg
+                  id="contactIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 text-[var(--white)] bg-[var(--primary)] group-hover:bg-[var(--white)] group-hover:text-[var(--primary)] rounded-full"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+          <article
+            class="blog-item bg-[var(--white-2)] w-full sm:w-[calc(50%-10px)] md:w-[calc(33.33%-10px)] lg:w-[calc(25%-15px)] h-[290px] rounded-[10px] shadow-md"
+          >
+            <img
+              src="https://picsum.photos/200"
+              alt="Blog Image"
+              class="blog-image object-cover w-full rounded-tl-[10px] rounded-tr-[10px] h-[57%]"
+            />
+            <div
+              class="desc px-4 mt-2 flex flex-col justify-between h-[calc(43%-1rem)]"
+            >
+              <div>
+                <h2 class="blog-title font-semibold text-base">Blog Title 4</h2>
+                <p class="blog-description text-xs my-2 text-gray-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod....
+                </p>
+              </div>
+              <a
+                href="#"
+                class="flex items-center gap-2 blog-link text-[var(--primary)] text-sm mt-2"
+                ><span> Read More </span>
+                <svg
+                  id="contactIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6 text-[var(--white)] bg-[var(--primary)] group-hover:bg-[var(--white)] group-hover:text-[var(--primary)] rounded-full"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        class="min-h-[60dvh] flex items-center flex-col px-4 sm:px-10 py-10"
+        id="messageUs"
+      >
+        <h1
+          class="text-4xl sm:text-5xl text-center font-semibold tracking-extra-wide"
+        >
+          Message Us
+        </h1>
+        <p class="text-center mt-4 px-4 text-sm sm:text-base max-w-2xl">
+          If you have any questions or feedback, feel free to reach out to us
+          through our contact form.
+        </p>
+        <form
+          class="w-full lg:w-[80%] border px-4 sm:px-10 md:px-20 py-10 rounded-[12px] border-gray-300 bg-[var(--white)] mt-10 shadow-lg max-w-4xl"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="email" class="block text-gray-700 font-medium"
+                >Email:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div>
+              <label for="name" class="block text-gray-700 font-medium"
+                >Name:</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+                placeholder="Enter your name"
+              />
+            </div>
+          </div>
+          <div class="mt-4">
+            <label for="message" class="block text-gray-700 font-medium"
+              >Message:</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
+              placeholder="Type your message here"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-6 bg-[var(--primary)] text-white px-6 py-3 rounded-full hover:bg-[var(--secondary)] transition-colors duration-300 font-semibold"
+          >
+            Send Message
+          </button>
+        </form>
+      </section>
+
+      <section class="py-10 px-4 sm:px-10">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-8">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-center mt-4 px-4 text-sm sm:text-base mb-8">
+          Here are some common questions about Kawaidays. If you can't find what
+          you're looking for, feel free to
+          <a
+            href="#messageUs"
+            class="text-[var(--primary)] hover:underline font-semibold"
+            >message us</a
+          >!
+        </p>
+
+        <div class="max-w-3xl mx-auto">
+          <details class="mb-4 shadow-md rounded-lg overflow-hidden">
+            <summary
+              class="text-lg font-semibold cursor-pointer py-3 px-4 bg-gray-100 flex justify-between items-center hover:bg-gray-200 transition-colors duration-200"
+            >
+              What is Kawaidays?
+              <svg
+                class="w-5 h-5 text-gray-600 transform transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <p class="mt-2 p-4 border-t border-gray-200 bg-white text-gray-700">
+              Kawaidays is a career and skills platform designed to help you
+              discover your passions, learn at your own pace, and grow essential
+              skills for your career and personal development. We provide a
+              supportive environment for learning and growth.
+            </p>
+          </details>
+
+          <details class="mb-4 shadow-md rounded-lg overflow-hidden">
+            <summary
+              class="text-lg font-semibold cursor-pointer py-3 px-4 bg-gray-100 flex justify-between items-center hover:bg-gray-200 transition-colors duration-200"
+            >
+              What kind of skills can I learn on Kawaidays?
+              <svg
+                class="w-5 h-5 text-gray-600 transform transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <p class="mt-2 p-4 border-t border-gray-200 bg-white text-gray-700">
+              While the current content doesn't specify particular skills,
+              Kawaidays is positioned as a platform for learning and growing
+              skills that matter. Our goal is to empower you with the knowledge
+              and abilities you need to succeed.
+            </p>
+          </details>
+
+          <details class="mb-4 shadow-md rounded-lg overflow-hidden">
+            <summary
+              class="text-lg font-semibold cursor-pointer py-3 px-4 bg-gray-100 flex justify-between items-center hover:bg-gray-200 transition-colors duration-200"
+            >
+              Is Kawaidays suitable for beginners or experienced learners?
+              <svg
+                class="w-5 h-5 text-gray-600 transform transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <p class="mt-2 p-4 border-t border-gray-200 bg-white text-gray-700">
+              Kawaidays is designed for everyone! Whether you're just starting
+              your learning journey or looking to enhance existing skills, our
+              platform aims to provide valuable resources and opportunities for
+              all levels.
+            </p>
+          </details>
+
+          <details class="mb-4 shadow-md rounded-lg overflow-hidden">
+            <summary
+              class="text-lg font-semibold cursor-pointer py-3 px-4 bg-gray-100 flex justify-between items-center hover:bg-gray-200 transition-colors duration-200"
+            >
+              How can I get started with Kawaidays?
+              <svg
+                class="w-5 h-5 text-gray-600 transform transition-transform duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </summary>
+            <p class="mt-2 p-4 border-t border-gray-200 bg-white text-gray-700">
+              You can easily get started by clicking the
+              <strong class="text-[var(--primary)]">"Get Started"</strong>
+              button on our homepage. This will guide you through the initial
+              steps to begin your learning and growth experience with us.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <a
+      href="#"
+      id="goToTop"
+      class="right-5 transition-all duration-300 ease-in-out fixed border bottom-10 p-2 opacity-[.7] hover:opacity-[1] hover:bg-[var(--primary)] rounded-full border-[var(--primary)] text-[var(--primary)] hover:text-[var(--white)] z-40"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18"
+        />
+      </svg>
+    </a>
+
+    <footer class="mt-12 py-6 text-center text-sm px-4 sm:px-10">
+      <div class="flex flex-col items-center gap-2">
+        <div
+          class="bg-[var(--primary)] px-8 py-10 sm:px-20 sm:py-20 rounded-[10px] justify-center items-center text-white flex flex-col w-full lg:w-[70%] text-center max-w-4xl"
+        >
+          <h1
+            class="text-3xl sm:text-5xl font-semibold tracking-extra-wide leading-tight"
+          >
+            Unlock Access to an <br />Exclusive Network
+          </h1>
+          <a
+            href="#"
+            class="text-sm mt-8 sm:mt-10 font-semibold bg-[var(--white)] text-[var(--primary)] px-5 py-2 rounded-[4px] hover:bg-gray-100 transition-colors duration-300"
+            >Join Now</a
+          >
+        </div>
+        <div class="flex gap-5 mt-5 flex-wrap justify-center">
+          <a
+            class="underline text-gray-700 hover:text-[var(--primary)]"
+            href="#homePage"
+            >Home</a
+          >
+          <a
+            class="underline text-gray-700 hover:text-[var(--primary)]"
+            href="#ourProfile"
+            >Our Profile</a
+          >
+          <a
+            class="underline text-gray-700 hover:text-[var(--primary)]"
+            href="#blog"
+            >Blogs</a
+          >
+          <a
+            class="underline text-gray-700 hover:text-[var(--primary)]"
+            href="#messageUs"
+            >Message</a
+          >
+        </div>
+      </div>
+      <div
+        class="mt-5 flex flex-col sm:flex-row justify-between items-center text-gray-400 gap-2 sm:gap-0 max-w-7xl mx-auto"
+      >
+        <h1 class="text-xs sm:text-sm">
+          &copy;2025 <a href="#" class="text-[var(--primary)]">Kawaidays</a>.
+          Built With Love. All rights reserved.
+        </h1>
+        <div class="social flex gap-3">
+          <a
+            href="#"
+            class="social-link instagram hover:opacity-75 transition-opacity"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#343f5a"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-instagram-icon lucide-instagram"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="social-link facebook hover:opacity-75 transition-opacity"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#3b3f5a"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook-icon lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="social-link youtube hover:opacity-75 transition-opacity"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#3b3f5a"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-youtube-icon lucide-youtube"
+            >
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+              />
+              <path d="m10 15 5-3-5-3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
